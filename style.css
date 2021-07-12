@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.intro > header {
+  text-align: center;
+}
+
+h1 {
+  font-family: Orbiton, sans-serif;
+  font-size: 5em;
+  font-weight: 800;
+  color: #bcb4d1;
+  text-shadow: 6px 9px 2px #282828;
+  display: inline;
+  color: #f0c755;
+}
+
+h2 {
+  font-family: Orbiton, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #bcb4d1;
+}
+
+a {
+  color: #f0c755;
+  font-style: italic;
+}
+a:hover {
+  color: black;
+}
+
+h3 {
+  font-family: Orbiton, sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #bcb4d1;
+}
+
+[role=article] {
+  font-family: Mrtel, serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #bcb4d1;
+}
+
+.summary {
+  display: block;
+  width: 100%;
+  align-items: center;
+}
+.summary p {
+  display: inline;
+}
+
+body {
+  background-color: #4f446f;
+  margin-right: 280px;
+  padding: 5px 30px 10px 40px;
+}
+
+.sidebar {
+  font-family: Orbiton, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #bcb4d1;
+  padding: 5px 15px 0px 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #38304f;
+  text-align: center;
+}
+.sidebar h3 {
+  margin-bottom: -10px;
+}
+.sidebar ul {
+  list-style-type: none;
+}
+.sidebar ul li {
+  margin: 5px;
+}
+.sidebar ul .designer-name {
+  display: block;
+}
+.sidebar a:hover {
+  color: #fff;
+}
+
+.main {
+  flex-wrap: wrap;
+  display: flex;
+  flex-grow: 1;
+}
+.main .explanation {
+  float: left;
+  width: 50%;
+  padding-right: 33px;
+}
+.main .participation {
+  float: left;
+  width: 50%;
+}
+.main .benefits > h3 {
+  margin-top: -20px;
+}
+.main .requirements {
+  border-bottom: 5px solid black;
+  border-radius: 1%;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+footer * {
+  background-color: #38304f;
+  height: 2rem;
+  width: 4rem;
+  text-align: center;
+  padding: 4px;
+  border: 3px solid #38304f;
+  border-radius: 15%;
+}
+footer *:hover {
+  transform: scale(1.4);
+  background-color: #fff;
+  border-color: #4f446f;
+}
+
+/*# sourceMappingURL=style.css.map */

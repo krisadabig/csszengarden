@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@300&display=swap");
+
+$primary-background-color: #4f446f;
+$secondary-background-color: #38304f;
+
+$font-color: #bcb4d1;
+$secondary-font-color: #282828;
+$another-font-color: #f0c755;
+$font-header: Orbiton, sans-serif;
+$font-para: Mrtel, serif;
+
+@mixin header($font, $size: 1.5em, $fontWeight: 700) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $fontWeight;
+  color: $font-color;
+}
+
+@mixin wrapper($right, $down, $blur) {
+  text-shadow: $right $down $blur $secondary-font-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.intro > header {
+  text-align: center;
+}
+h1 {
+  @include header($font-header, 5em, 800);
+  @include wrapper(6px, 9px, 2px);
+  display: inline;
+  color: $another-font-color;
+}
+h2 {
+  @include header($font-header, 2em);
+  // @include wrapper(8px, 10px, 2px);
+}
+a {
+  color: $another-font-color;
+  font-style: italic;
+  &:hover {
+    color: black;
+  }
+}
+
+h3 {
+  @include header($font-header);
+}
+
+[role="article"] {
+  @include header($font-para, $fontWeight: 400);
+}
+.summary {
+  display: block;
+  width: 100%;
+  align-items: center;
+  p {
+    display: inline;
+  }
+}
+
+body {
+  background-color: $primary-background-color;
+  margin-right: 280px;
+  padding: 5px 30px 10px 40px;
+}
+
+.sidebar {
+  @include header($font-header, 1.2em);
+  padding: 5px 15px 0px 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background-color: $secondary-background-color;
+  h3 {
+    margin-bottom: -10px;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      margin: 5px;
+    }
+    .designer-name {
+      display: block;
+    }
+  }
+  text-align: center;
+
+  a:hover {
+    color: #fff;
+  }
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  .explanation {
+    float: left;
+    width: 50%;
+    padding-right: 33px;
+  }
+  .participation {
+    float: left;
+    width: 50%;
+  }
+  .benefits > h3 {
+    margin-top: -20px;
+  }
+
+  .requirements {
+    border-bottom: 5px solid black;
+    border-radius: 1%;
+  }
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+  margin {
+    top: 40px;
+    bottom: 30px;
+  }
+
+  * {
+    background-color: $secondary-background-color;
+    height: 2rem;
+    width: 4rem;
+    text-align: center;
+    padding: 4px;
+    border: 3px solid $secondary-background-color;
+    border-radius: 15%;
+
+    &:hover {
+      transform: scale(1.4);
+      background-color: #fff;
+      border-color: $primary-background-color;
+    }
+  }
+}
